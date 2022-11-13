@@ -20,7 +20,8 @@
       <h2>My Course Goal</h2>
       <!-- {{}} : 보간법 => vue data에서 반환된 데이터 프로퍼티를 참조해 렌더링하는 문법 태그 사이에서만 사용가능하다. -->
       <p>{{ courseGoal }}</p>
-      <p>Learn more <a href="#">about Vue</a>.</p>
+      <!-- html요소를 지정할때 v-bind:element 지정 -->
+      <p>Learn more <a v-bind:href="vueLink">about Vue</a>.</p>
     </section>
   </body>
 </html>
