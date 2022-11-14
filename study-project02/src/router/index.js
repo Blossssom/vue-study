@@ -15,11 +15,27 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+  },
+  {
+    path: '/databinding/string',
+    name: 'bindingString',
+    component: () =>
+      import(
+        /* webpackChunkName: "binding" */ '../views/1_databinding/DataBindingStringView.vue'
+      )
+  },
+  {
+    path: '/databinding/html',
+    name: 'bindingHtml',
+    component: () =>
+      import(
+        /* webpackChunkName: "binding" */ '../views/1_databinding/DataBindingHtmlView.vue'
+      )
   }
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(),
   routes
 })
 
