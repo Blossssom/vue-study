@@ -3,7 +3,10 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/databinding/string">Binding</router-link> |
-    <router-link to="/databinding/html">Binding HTML</router-link>
+    <router-link to="/databinding/html">Binding HTML</router-link> |
+    <router-link to="/databinding/input">Binding input</router-link> |
+    <router-link to="/databinding/select">Binding select</router-link> |
+    <router-link to="/databinding/checkbox">Binding checkbox</router-link>
   </nav>
   <router-view />
 </template>
