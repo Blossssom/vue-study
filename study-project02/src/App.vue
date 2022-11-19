@@ -6,7 +6,10 @@
     <router-link to="/databinding/html">Binding HTML</router-link> |
     <router-link to="/databinding/input">Binding input</router-link> |
     <router-link to="/databinding/select">Binding select</router-link> |
-    <router-link to="/databinding/checkbox">Binding checkbox</router-link>
+    <router-link to="/databinding/checkbox">Binding checkbox</router-link> |
+    <router-link to="/databinding/list">Binding list</router-link> |
+    <router-link to="/databinding/class">Binding class</router-link> |
+    <router-link to="/databinding/style">Binding style</router-link>
   </nav>
   <router-view />
 </template>

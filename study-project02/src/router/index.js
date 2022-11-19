@@ -55,6 +55,30 @@ const routes = [
       import(
         /* webpackChunkName: "binding" */ '../views/1_databinding/DataBindingCheckBoxView.vue'
       )
+  },
+  {
+    path: '/databinding/list',
+    name: 'bindingList',
+    component: () =>
+      import(
+        /* webpackChunkName: "binding" */ '../views/1_databinding/DataBindingListView.vue'
+      )
+  },
+  {
+    path: '/databinding/class',
+    name: 'bindingClass',
+    component: () =>
+      import(
+        /* webpackChunkName: "binding" */ '../views/1_databinding/DataBindingClassView.vue'
+      )
+  },
+  {
+    path: '/databinding/style',
+    name: 'bindingStyle',
+    component: () =>
+      import(
+        /* webpackChunkName: "binding" */ '../views/1_databinding/DataBindingStyleView.vue'
+      )
   }
 ]
 
