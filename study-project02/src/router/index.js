@@ -79,6 +79,16 @@ const routes = [
       import(
         /* webpackChunkName: "binding" */ '../views/1_databinding/DataBindingStyleView.vue'
       )
+  },
+  {
+    path: '/event/click',
+    name: 'eventClick',
+    component: () => import(/* webpackChunkName: "event" */ '../views/2_event/EventClickView.vue')
+  },
+  {
+    path: '/event/change',
+    name: 'eventChange',
+    component: () => import(/* webpackChunkName: "event" */ '../views/2_event/EventChangeView.vue')
   }
 ]
 

@@ -11,11 +11,12 @@
     <img :src="imgSrc" alt="sparkle img"> -->
     <br />
 
-    <input type="text" v-model="disabledText">
+    <input type="text" v-model="disabledText" />
     <button :disabled="disabledText === ''">search</button>
   </div>
 </template>
 <script>
+import { onMounted } from '@vue/runtime-core'
 export default {
   name: 'bindingInput',
   components: {},
@@ -25,14 +26,17 @@ export default {
       userId: '',
       num1: 0,
       num2: 0,
-      imgSrc: 'https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/174x/image/pye3SMRLg7SSRbNzsolx25cyu9U.JPG',
+      imgSrc:
+        'https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/174x/image/pye3SMRLg7SSRbNzsolx25cyu9U.JPG',
       disabledText: ''
     }
   },
-  setup() { },
-  created() { },
-  mounted() { },
-  unmounted() { },
+  setup() {
+    onMounted(() => console.log('mount in DataBindingInputView'))
+  },
+  created() {},
+  mounted() {},
+  unmounted() {},
   methods: {
     clickHandler() {
       console.log(this.userId)

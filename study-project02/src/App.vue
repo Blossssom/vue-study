@@ -1,18 +1,43 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/databinding/string">Binding</router-link> |
-    <router-link to="/databinding/html">Binding HTML</router-link> |
-    <router-link to="/databinding/input">Binding input</router-link> |
-    <router-link to="/databinding/select">Binding select</router-link> |
-    <router-link to="/databinding/checkbox">Binding checkbox</router-link> |
-    <router-link to="/databinding/list">Binding list</router-link> |
-    <router-link to="/databinding/class">Binding class</router-link> |
-    <router-link to="/databinding/style">Binding style</router-link>
+    <p class="section-name">Binding</p>
+    <router-link
+      v-for="(route, idx) in routerList"
+      :key="route.id"
+      :to="route.to"
+      >{{ route.title }} {{ idx !== routerList.length - 1 ? '|' : '' }}
+    </router-link>
+  </nav>
+  <br />
+  <nav>
+    <p class="section-name">Event</p>
+    <router-link to="/event/click">Click Event</router-link> |
+    <router-link to="/event/change">Change Event</router-link>
   </nav>
   <router-view />
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      routerList: [
+        { id: 1, to: '/', title: 'Home' },
+        { id: 2, to: '/about', title: 'About' },
+        { id: 3, to: '/databinding/string', title: 'Binding' },
+        { id: 4, to: '/databinding/html', title: 'Binding HTML' },
+        { id: 5, to: '/databinding/input', title: 'Binding input' },
+        { id: 6, to: '/databinding/select', title: 'Binding select' },
+        { id: 7, to: '/databinding/checkbox', title: 'Binding checkbox' },
+        { id: 8, to: '/databinding/list', title: 'Binding list' },
+        { id: 9, to: '/databinding/class', title: 'Binding class' },
+        { id: 10, to: '/databinding/style', title: 'Binding style' }
+      ]
+    }
+  },
+  setup() {}
+}
+</script>
 
 <style>
 #app {
@@ -34,5 +59,10 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.section-name {
+  font-size: 30px;
+  font-weight: bold;
 }
 </style>
