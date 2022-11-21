@@ -12,7 +12,8 @@
   <nav>
     <p class="section-name">Event</p>
     <router-link to="/event/click">Click Event</router-link> |
-    <router-link to="/event/change">Change Event</router-link>
+    <router-link to="/event/change">Change Event</router-link> |
+    <router-link to="/event/key">key Event</router-link>
   </nav>
   <router-view />
 </template>
