@@ -1,8 +1,10 @@
 const app = Vue.createApp({
   data() {
     return {
-      counter: 5,
+      counter: 1,
       name: "",
+      lastName: "",
+      fullName: "",
     };
   },
   methods: {
@@ -17,9 +19,20 @@ const app = Vue.createApp({
     },
   },
   computed: {
-    addFirstName() {
+    getFullName() {
       console.log("running computed");
-      return this.name === "" ? "" : this.name + " bloxxom";
+      return this.name === "" || this.lastName === ""
+        ? ""
+        : this.name + ` ${this.lastName}`;
+    },
+  },
+  watch: {
+    counter(value) {
+      if (value > 5) {
+        setTimeout(() => {
+          this.counter = 0;
+        }, 2000);
+      }
     },
   },
 });
